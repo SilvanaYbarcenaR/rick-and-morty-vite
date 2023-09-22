@@ -1,0 +1,231 @@
+/* Episodes */
+.tvContainer {
+    padding-left: 17%;
+    position: relative;
+    transform: scale(0.95);
+}
+.tv {
+    animation: translateOpacity2 0.7s cubic-bezier(.65,.1,.33,.87) 1s forwards;
+    margin-top: 1.5rem;
+    height: 82vh;
+    opacity: 0;
+    position: relative;
+    z-index: 3;
+}
+iframe {
+    animation: opacity 0.7s ease-in 1.1s forwards;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.popcorn {
+    animation: scaleOpacity 0.7s ease-in-out forwards;
+    bottom: -3%;
+    left: 2%;
+    position: absolute;
+    width: 30%;
+    z-index: -1;
+}
+.wing {
+    animation: translateOpacity 0.7s ease-in-out 0.2s forwards;
+    align-items: center;
+    background-image: url(../../assets/wing.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: red;
+    display: flex;
+    font-size: 3rem;
+    font-family: 'VT323', monospace;
+    height: 25%;
+    justify-content: center;
+    left: 5%;
+    opacity: 0;
+    padding: 0 4rem 3.5rem;
+    position: absolute;
+    top: 26%;
+    width: 20%;
+}
+.wing span {
+    animation: opacityZoom 0.7s ease-in-out 0.6s forwards;
+    opacity: 0;
+}
+.tvGif {
+    animation: opacity 0.7s ease-in 1.1s forwards;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.listContainer {
+    animation: opacity 0.7s ease-in 1.1s forwards;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 10.5%;
+    opacity: 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 9.7%;
+    top: 9.8%;
+    z-index: 3;
+}
+.listContainer button {
+    font-weight: bold;
+    height: 1.9rem;
+    background-color: #000000c2;
+    margin: 0.2rem 0;
+    font-size: 0.8rem;
+}
+.buttonsContainer {
+    animation: opacity 0.7s ease-in 1.1s forwards;
+    opacity: 0;
+    position: absolute;
+    right: 10.9%;
+    text-transform: uppercase;
+    top: 44.5%;
+    z-index: 3;
+}
+.buttonsContainer button {
+    font-family: 'VT323', monospace;
+    background: #d0cabe;
+    padding: 0.3rem 0.8rem;
+    color: #795548;
+    font-size: 1rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0 0.3rem;
+    box-shadow: 0 0 6px #d0cabe;
+}
+.filtersContainer {
+    bottom: 14.6vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 18%;
+    z-index: 3;
+}
+.filtersContainer button {
+    border-radius: 50%;
+    height: 1.4rem;
+    margin: 0.8rem 0;
+    width: 1.4rem;
+}
+.filterImage {
+    left: 23vw;
+    height: 71%;
+    position: absolute;
+    top: 13%;
+    width: 46vw;
+    z-index: 2;
+} 
+.filterText {
+    font-family: 'VT323', monospace;
+    font-size: 2.8rem;
+    left: 31%;
+    position: absolute;
+    text-shadow: 0 0 5px #000000;
+    top: 16.5%;
+    z-index: 3;
+}
+.filterContent {
+    left: 29%;
+    height: 72.5%;
+    position: absolute;
+    top: 11.5%;
+    transition: all 0.5s ease;
+    width: 82vh;
+    z-index: 2;
+}
+.rainbow {
+    animation: rainbow infinite 2000ms;
+}
+.bright {
+    opacity: 0.5;
+}
+.grayscale {
+   filter: grayscale(1);
+}
+
+@keyframes rainbow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    25% {
+        filter: hue-rotate(90deg);
+    }
+    50% {
+        filter: hue-rotate(180deg);
+    }
+    75% {
+        filter: hue-rotate(270deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    } 
+}
+@keyframes scaleOpacity {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    } 
+}
+@keyframes translateOpacity {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.8;
+    } 
+}
+@keyframes translateOpacity2 {
+    0% {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 0.8;
+    } 
+}
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    } 
+}
+@keyframes opacityZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    } 
+}
+@keyframes opacityZoom2 {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    } 
+}

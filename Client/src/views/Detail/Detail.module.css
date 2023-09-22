@@ -1,0 +1,103 @@
+/* Styles detail */
+.detailContainer {
+    align-items: center;
+    animation: width 0.5s cubic-bezier(.65,.1,.33,.87) 0.2s forwards;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    margin: 4rem auto 0;
+    height: 75vh;
+    position: relative;
+    width: 0;
+}
+.detailContainer::before {
+    border: 2px dashed rgba(255,255,255,0.15);
+    content: "";
+    height: 87%;
+    position: absolute;
+    width: 93%;
+}
+.detailContainer img {
+    animation: opacityScale 1s ease-in-out 2.1s infinite;
+    border-radius: 50%;
+    box-shadow: 0 25px 10px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: scale(0.7);
+    width: 60%;
+}
+.detailContainer h1 {
+    animation: opacityDown 0.8s ease-out 1s forwards;
+    font-family: 'VT323', monospace;
+    font-size: 4rem;
+    margin-top: 0;
+    opacity: 0;
+    text-shadow: 0 6px 15px #d31ee9;
+    text-transform: uppercase;
+}
+.detailContainer.Female h1 {
+    text-shadow: 0 6px 15px #d31ee9;
+}
+.detailContainer.Male h1 {
+    text-shadow: 0 6px 15px #19ff00;
+}
+.detailContainer>div:nth-of-type(1) {
+    width: 60%;
+}
+.detailContainer>div:nth-of-type(2) {
+    width: 40%;
+}
+.detailContainer .detailList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.detailContainer .detailList p {
+    background: #d31ee9;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+    margin: 1.2rem 2rem;
+    opacity: 0;
+    padding: 1.1rem 2rem;
+    width: 40%;
+}
+
+.detailContainer .detailList p:nth-of-type(1) {
+    animation: opacityUp 0.5s ease-in-out 1.2s forwards;
+}
+.detailContainer .detailList p:nth-of-type(2) {
+    animation: opacityUp 0.5s ease-in-out 1.35s forwards;
+}
+.detailContainer .detailList p:nth-of-type(3) {
+    animation: opacityUp 0.5s ease-in-out 1.5s forwards;
+}
+.detailContainer .detailList p:nth-of-type(4) {
+    animation: opacityUp 0.5s ease-in-out 1.65s forwards;
+}
+.detailContainer .detailList p:nth-of-type(5) {
+    animation: opacityUp 0.5s ease-in-out 1.8s forwards;
+}
+.detailContainer.Male .detailList p {
+    background: #5531d5;
+}
+.detailContainer.Female .detailList p {
+    background: #d31ee9;
+}
+
+@keyframes width {
+    from {width: 0;}
+    to {width: 80%; padding: 3rem;}
+}
+
+@keyframes opacityUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+@keyframes opacityDown {
+    from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+@keyframes opacityScale {
+    0% {opacity: .8; transform: scale(0.95);}
+    60% {opacity: 1; transform: scale(1);}
+    100% {opacity: .8; transform: scale(0.95);}
+}
